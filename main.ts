@@ -7,8 +7,13 @@ radio.onReceivedString(function (receivedString) {
         servos.P0.setAngle(135)
         basic.pause(500)
         servos.P0.stop()
-        basic.clearScreen()
+    } else if (receivedString == "meds weren't taken") {
+        basic.showIcon(IconNames.No)
+    } else {
+    	
     }
+    basic.pause(1000)
+    basic.clearScreen()
 })
 radio.setGroup(218)
 basic.showLeds(`
